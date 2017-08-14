@@ -6,8 +6,14 @@ project_folder = "template-project"
 
 sub_folders = ["", "/html", "/js", "/css", "/images"]
 
+web_files = ["/html/index.html", "/css/style.css"]
+
 def new_folder(foldername)
   FileUtils::mkdir_p foldername
+end
+
+def new_file(filepath)
+  FileUtils::touch filepath
 end
 
 #Link to Bootstrap via CDN
@@ -21,8 +27,9 @@ purecss = '<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pu
 #Making folder structure
 sub_folders.each { |subfolder| new_folder(project_folder + subfolder) }
 
+#Making individual html and css files
+web_files.each { |webfile| new_file(project_folder + webfile)}
 
-#Making individual files
 
 #FileUtils::touch folder_name + "/html/index.html"
 #FileUtils::touch folder_name + "/css/style.css"

@@ -33,8 +33,10 @@ Does what is says on the tin really. Run *ruby launchpad-lite* and the program w
 
 ### TODO
 
-- [x] DRY up code written during prototyping
+- [] DRY up code written during prototyping
 - [x] Add editable html template file to use during generation
-- [x] Make the program executable from any directory, and too any directory
-- [x] Add HTML framework support
-- [x] Add customization for CSS frameworks
+- [] Make the program executable from any directory, and too any directory
+- [] Add HTML framework support
+- [] Add customization for CSS frameworks
+- [] Add back Bootstrap and PureCSS support
+- [] Add support for launching project folder in preferred text-editor

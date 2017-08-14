@@ -35,7 +35,7 @@ Does what is says on the tin really. Run *ruby launchpad-lite* and the program w
 
 - [x] DRY up code written during prototyping
 - [x] Add editable html template file to use during generation
-- [x] Make the program executable from any directory, and too any directory
-- [x] Add HTML framework support
-- [x] Add customization for CSS frameworks
-- [x] Dynamically write href links to css framework CDNs into index.html header
+- [] Make the program executable from any directory, and too any directory
+- [] Add HTML framework support
+- [] Add customization for CSS frameworks
+- [] Dynamically write href links to css framework CDNs into index.html header

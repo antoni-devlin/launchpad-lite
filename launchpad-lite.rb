@@ -2,6 +2,14 @@
 
 require "fileutils"
 
+project_folder = "template-project"
+
+sub_folders = ["", "/html", "/js", "/css", "/images"]
+
+def new_folder(foldername)
+  FileUtils::mkdir_p foldername
+end
+
 #Link to Bootstrap via CDN
 bootstrap_css = '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">'
 bootstrap_optional_theme = '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">'
@@ -11,19 +19,13 @@ boostrap_js = '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/b
 purecss = '<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">'
 
 #Making folder structure
+sub_folders.each { |subfolder| new_folder(project_folder + subfolder) }
 
-folder_name = "template-project"
-
-FileUtils::mkdir_p folder_name
-FileUtils::mkdir_p folder_name + "/html"
-FileUtils::mkdir_p folder_name + "/js"
-FileUtils::mkdir_p folder_name + "/css"
-FileUtils::mkdir_p folder_name + "/images"
 
 #Making individual files
 
-FileUtils::touch folder_name + "/html/index.html"
-FileUtils::touch folder_name + "/css/style.css"
+#FileUtils::touch folder_name + "/html/index.html"
+#FileUtils::touch folder_name + "/css/style.css"
 
 css_path = folder_name + "/css/style.css"
 
